@@ -30,4 +30,31 @@ Times are UTC and come from my research log. "Found" is when the issue was first
 | [XXL-JOB-2026-02](xxl-job/XXL-JOB-2026-02-openapi-token-not-bound-to-group.md) | OpenAPI access token not bound to its executor group | 8.3 | 2026-11-02 01:45 | 2026-11-02 01:46 | pending | Vendor notified 2026-11-02, no reply; CVE requested from MITRE on 2026-11-17 |
 | [XXL-JOB-2026-03](xxl-job/XXL-JOB-2026-03-user-pagelist-session-token.md) | Admin user list returns other users' session tokens | 2.7 | 2026-11-02 01:45 | 2026-11-02 01:47 | pending | Vendor notified 2026-11-02, no reply |
 
+## uListing
+
+- Source: https://wordpress.org/plugins/ulisting/
+- Tested version: 2.2.0 (latest release at test time)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [ULISTING-2026-01](ulisting/ULISTING-2026-01-unauth-listing-deletion.md) | Unauthenticated permanent deletion of listings through `/1/api/ulisting-user/deletelisting` | 7.5 | 2026-10-30 02:19 | 2026-10-30 02:25 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+
+## Product Options and Price Calculation Formulas for WooCommerce (Uni CPO)
+
+- Source: https://wordpress.org/plugins/uni-woo-custom-product-options/
+- Tested version: 4.9.71 (latest release at test time)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [UNI-CPO-2026-01](uni-cpo/UNI-CPO-2026-01-guest-order-line-product-substitution.md) | Guest can swap the product on an order line for another product while paying the cheap product's price | 8.2 | — | 2026-11-18 07:19 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+
+## WPAdverts
+
+- Source: https://wordpress.org/plugins/wpadverts/
+- Tested version: 2.3.5 (latest release at test time)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [WPADVERTS-2026-01](wpadverts/WPADVERTS-2026-01-unauth-stored-xss-phone-button.md) | Unauthenticated stored XSS through the ad Phone Number in the Contact Form "Call" button | 7.2 | 2026-10-30 09:04 | 2026-10-30 09:04 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+
 All testing was done in a local lab with test accounts and test data. No production system was tested.
