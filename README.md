@@ -30,6 +30,48 @@ Times are UTC and come from my research log. "Found" is when the issue was first
 | [XXL-JOB-2026-02](xxl-job/XXL-JOB-2026-02-openapi-token-not-bound-to-group.md) | OpenAPI access token not bound to its executor group | 8.3 | 2026-11-02 01:45 | 2026-11-02 01:46 | pending | Vendor notified 2026-11-02, no reply; CVE requested from MITRE on 2026-11-17 |
 | [XXL-JOB-2026-03](xxl-job/XXL-JOB-2026-03-user-pagelist-session-token.md) | Admin user list returns other users' session tokens | 2.7 | 2026-11-02 01:45 | 2026-11-02 01:47 | pending | Vendor notified 2026-11-02, no reply |
 
+## Sa-Token
+
+- Source: https://github.com/dromara/Sa-Token · Maven `cn.dev33:sa-token-*`
+- Tested version: 1.46.0 (latest release at test time)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [SA-TOKEN-2026-01](sa-token/SA-TOKEN-2026-01-encoded-path-saroute-bypass.md) | Percent-encoded letters in the path bypass SaRouter rules in the Spring Boot 2 starter | 6.5 | — | 2026-11-17 10:23 | pending (requested from MITRE 2026-11-22) | Reported 2026-11-17 via GitHub (GHSA-vg7p-x828-qvmx); in triage, no reply as of 2026-11-22 |
+| [SA-TOKEN-2026-02](sa-token/SA-TOKEN-2026-02-sso-ticket-fragment-allow-url-bypass.md) | SSO redirect check ignores the URL fragment, so the login ticket can be sent to an attacker page | 8.1 | — | 2026-11-17 14:47 | pending (requested from MITRE 2026-11-22) | Reported 2026-11-17 via GitHub (GHSA-g2m5-xwp5-ch3w); in triage, no reply as of 2026-11-22 |
+| [SA-TOKEN-2026-03](sa-token/SA-TOKEN-2026-03-class-level-annotations-skipped.md) | Class-level @SaCheckRole / @SaCheckLogin is not applied to handler methods inherited from a base controller | 4.8 | — | 2026-11-17 14:47 | pending (requested from MITRE 2026-11-22) | Reported 2026-11-17 via GitHub (GHSA-2jcm-vmf7-g4mx); in triage, no reply as of 2026-11-22 |
+| [SA-TOKEN-2026-04](sa-token/SA-TOKEN-2026-04-sign-nonce-stored-before-signature.md) | sa-token-sign stores the nonce before checking the signature, allowing unauthenticated memory exhaustion | 7.5 | — | 2026-11-17 14:47 | pending (requested from MITRE 2026-11-22) | Reported 2026-11-17 via GitHub (GHSA-445w-cfq4-vjj2); in triage, no reply as of 2026-11-22 |
+| [SA-TOKEN-2026-05](sa-token/SA-TOKEN-2026-05-sso-logout-callback-host-ssrf.md) | SSO logout callback is built from the Host header and fetched by the SSO server without validation (blind SSRF) | 5.0 | — | 2026-11-17 14:47 | pending (requested from MITRE 2026-11-22) | Reported 2026-11-17 via GitHub (GHSA-g4g9-mxgm-fqcg); in triage, no reply as of 2026-11-22 |
+| [SA-TOKEN-2026-06](sa-token/SA-TOKEN-2026-06-oauth2-doconfirm-consent-csrf.md) | /oauth2/doConfirm has no CSRF protection, letting a registered client skip the consent screen | 3.7 | — | 2026-11-17 14:48 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+
+## Better Search Replace
+
+- Source: https://wordpress.org/plugins/better-search-replace/
+- Tested version: see advisory
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [BSR-2026-01](better-search-replace/BSR-2026-01-main-site-admin-to-super-admin.md) | On multisite, a main-site administrator can make themself network super admin by rewriting `wp_sitemeta` | 9.1 | 2026-11-03 08:30 | — | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+
+## miniOrange SAML 2.0 Single Sign On
+
+- Source: https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/
+- Tested version: 6.2.2 (latest release at test time)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [MINIORANGE-SAML-2026-01](miniorange-saml/MINIORANGE-SAML-2026-01-nameid-sanitize-account-collision.md) | SAML NameID is run through `sanitize_text_field()` before account matching, so a different signed identity logs in as an existing administrator | 7.5 | 2026-11-18 06:34 | 2026-11-18 06:49 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+| [MINIORANGE-SAML-2026-02](miniorange-saml/MINIORANGE-SAML-2026-02-unauth-oversize-response-object-injection.md) | Unauthenticated PHP object injection through an oversize test-mode SAMLResponse, triggered when an administrator exports the plugin configuration | 7.5 | — | 2026-11-18 07:19 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+
+## SiteOrigin Widgets Bundle
+
+- Source: https://wordpress.org/plugins/so-widgets-bundle/
+- Tested version: 1.76.0 (latest release at test time)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [SO-WIDGETS-BUNDLE-2026-01](so-widgets-bundle/SO-WIDGETS-BUNDLE-2026-01-contributor-lfi-price-table-theme.md) | Contributor can include any existing .php file through the Price Table `design.theme` value in the `[siteorigin_widget]` shortcode | 7.5 | — | 2026-11-18 07:18 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
+
 ## uListing
 
 - Source: https://wordpress.org/plugins/ulisting/
