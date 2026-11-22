@@ -8,7 +8,7 @@
 | Fixed version | none at time of writing |
 | Vulnerability type | Incorrect Access Control (CWE-863, incorrect authorization) |
 | Required access | Access token of any one executor group (no login) |
-| CVE | pending |
+| CVE | pending (requested from MITRE 2026-11-17) |
 | Reporter | thientc (VinSOC) |
 | Related | CVE-2026-7306 (different root cause) |
 

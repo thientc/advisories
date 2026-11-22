@@ -8,7 +8,7 @@
 | Fixed version | none at time of writing |
 | Vulnerability type | Incorrect Access Control (CWE-639, authorization bypass through user-controlled key) |
 | Required access | Authenticated normal user with permission on at least one executor group |
-| CVE | pending |
+| CVE | pending (requested from MITRE 2026-11-17) |
 | Reporter | thientc (VinSOC) |
 | Related | CVE-2023-33779, CVE-2025-9264 |
 

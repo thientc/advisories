@@ -3,10 +3,31 @@
 Advisories for vulnerabilities I found and reported, by thientc (VinSOC).
 Contact: thientc84@gmail.com
 
-| ID | Product | Issue | CVE | Status |
-|---|---|---|---|---|
-| [XXL-JOB-2026-01](xxl-job/XXL-JOB-2026-01-jobinfo-update-cross-group.md) | XXL-JOB 3.5.0 | Cross-group job takeover through /jobinfo/update | pending | Vendor notified 2026-11-02, no reply |
-| [XXL-JOB-2026-02](xxl-job/XXL-JOB-2026-02-openapi-token-not-bound-to-group.md) | XXL-JOB 3.5.0 | OpenAPI access token not bound to its executor group | pending | Vendor notified 2026-11-02, no reply |
-| [XXL-JOB-2026-03](xxl-job/XXL-JOB-2026-03-user-pagelist-session-token.md) | XXL-JOB 3.5.0 | Admin user list returns other users' session tokens | pending | Vendor notified 2026-11-02, no reply |
+Times are UTC and come from my research log. "Found" is when the issue was first recorded as a lead and "Confirmed" is when I reproduced it in the lab. A dash means the time was not recorded. CVSS is the 3.1 base score I proposed; the vendor or CNA may score it differently.
 
-All testing was done in a local lab with test accounts and test data.
+## mall
+
+- Source: https://github.com/macrozheng/mall (no published package; deployed from source)
+- Tested version: master `dcaa93b` (latest release at test time: 1.0.3)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [MALL-2026-01](mall/MALL-2026-01-jwt-alg-none-auth-bypass.md) | Unauthenticated login as any user via unsigned (alg:none) JWT | 9.8 | 2026-11-17 16:35 | 2026-11-17 23:41 | pending (requested from MITRE 2026-11-22) | Vendor contacted 2026-11-18 via public issue [#1042](https://github.com/macrozheng/mall/issues/1042) (contact request only; no private channel), no reply as of 2026-11-22 |
+| [MALL-2026-02](mall/MALL-2026-02-cart-client-price.md) | Client-supplied cart price becomes the order and payment amount | 6.5 | 2026-11-17 17:14 | 2026-11-17 17:14 | pending (requested from MITRE 2026-11-22) | Vendor contacted 2026-11-18 via public issue [#1042](https://github.com/macrozheng/mall/issues/1042) (contact request only; no private channel), no reply as of 2026-11-22 |
+| [MALL-2026-03](mall/MALL-2026-03-cart-negative-quantity.md) | Negative cart quantity lowers the order total and inflates stock | 6.5 | 2026-11-17 17:14 | 2026-11-17 17:14 | pending (requested from MITRE 2026-11-22) | Vendor contacted 2026-11-18 via public issue [#1042](https://github.com/macrozheng/mall/issues/1042) (contact request only; no private channel), no reply as of 2026-11-22 |
+| [MALL-2026-04](mall/MALL-2026-04-mall-search-missing-auth.md) | Missing authentication on mall-search index management | 6.5 | 2026-11-17 23:43 | 2026-11-17 23:43 | pending (requested from MITRE 2026-11-22) | Vendor contacted 2026-11-18 via public issue [#1042](https://github.com/macrozheng/mall/issues/1042) (contact request only; no private channel), no reply as of 2026-11-22 |
+| [MALL-2026-05](mall/MALL-2026-05-weblogaspect-credentials-in-logs.md) | Passwords, verification codes and JWTs written to the application log | 4.4 | 2026-11-17 23:43 | 2026-11-17 23:43 | pending (requested from MITRE 2026-11-22) | Vendor contacted 2026-11-18 via public issue [#1042](https://github.com/macrozheng/mall/issues/1042) (contact request only; no private channel), no reply as of 2026-11-22 |
+| [MALL-2026-06](mall/MALL-2026-06-collection-id-overwrite.md) | Member can overwrite other members' collection documents by id | 3.1 | 2026-11-17 17:14 | 2026-11-17 17:14 | pending (requested from MITRE 2026-11-22) | Vendor contacted 2026-11-18 via public issue [#1042](https://github.com/macrozheng/mall/issues/1042) (contact request only; no private channel), no reply as of 2026-11-22 |
+
+## XXL-JOB
+
+- Source: https://github.com/xuxueli/xxl-job (`xxl-job-admin`; executor library on Maven Central as `com.xuxueli:xxl-job-core`)
+- Tested version: 3.5.0 (tag `3bebfc16`, latest release at test time)
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [XXL-JOB-2026-01](xxl-job/XXL-JOB-2026-01-jobinfo-update-cross-group.md) | Cross-group job takeover through /jobinfo/update | 7.1 | 2026-11-02 01:45 | 2026-11-02 01:46 | pending | Vendor notified 2026-11-02, no reply; CVE requested from MITRE on 2026-11-17 |
+| [XXL-JOB-2026-02](xxl-job/XXL-JOB-2026-02-openapi-token-not-bound-to-group.md) | OpenAPI access token not bound to its executor group | 8.3 | 2026-11-02 01:45 | 2026-11-02 01:46 | pending | Vendor notified 2026-11-02, no reply; CVE requested from MITRE on 2026-11-17 |
+| [XXL-JOB-2026-03](xxl-job/XXL-JOB-2026-03-user-pagelist-session-token.md) | Admin user list returns other users' session tokens | 2.7 | 2026-11-02 01:45 | 2026-11-02 01:47 | pending | Vendor notified 2026-11-02, no reply |
+
+All testing was done in a local lab with test accounts and test data. No production system was tested.
