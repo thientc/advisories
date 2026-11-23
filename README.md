@@ -44,6 +44,22 @@ Times are UTC and come from my research log. "Found" is when the issue was first
 | [SA-TOKEN-2026-05](sa-token/SA-TOKEN-2026-05-sso-logout-callback-host-ssrf.md) | SSO logout callback is built from the Host header and fetched by the SSO server without validation (blind SSRF) | 5.0 | — | 2026-11-17 14:47 | pending (requested from MITRE 2026-11-22) | Reported 2026-11-17 via GitHub (GHSA-g4g9-mxgm-fqcg); in triage, no reply as of 2026-11-22 |
 | [SA-TOKEN-2026-06](sa-token/SA-TOKEN-2026-06-oauth2-doconfirm-consent-csrf.md) | /oauth2/doConfirm has no CSRF protection, letting a registered client skip the consent screen | 3.7 | — | 2026-11-17 14:48 | pending (requested from MITRE 2026-11-22) | Not reported to the vendor as of 2026-11-22 |
 
+## Spring Boot Admin
+
+- Source: https://github.com/codecentric/spring-boot-admin · Maven `de.codecentric:spring-boot-admin-server`
+- Tested version: 4.1.5 (latest release at test time); 01-03 first found and reported on 4.1.4
+
+| ID | Issue | CVSS 3.1 | Found (UTC) | Confirmed (UTC) | CVE | Status |
+|---|---|---|---|---|---|---|
+| [SPRING-BOOT-ADMIN-2026-01](spring-boot-admin/SPRING-BOOT-ADMIN-2026-01-sbom-license-javascript-url.md) | Instance-supplied SBOM license URL runs as `javascript:` on the admin origin | 4.1 | 2026-11-07 17:20 | 2026-11-17 10:10 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-04 via GitHub (GHSA-6g8m-59r6-vh42) (filed against 4.1.4; still present in 4.1.5), in triage, no reply |
+| [SPRING-BOOT-ADMIN-2026-02](spring-boot-admin/SPRING-BOOT-ADMIN-2026-02-instance-auth-credentials-sent-to-registered-url.md) | Name-keyed instance-auth credentials are sent to a registrant-chosen URL | 5.3 | 2026-11-08 06:04 | 2026-11-08 06:05 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-04 via GitHub (GHSA-m655-hhxw-w3mh) (filed against 4.1.4; still present in 4.1.5), in triage, no reply; follow-up comment 2026-11-23 |
+| [SPRING-BOOT-ADMIN-2026-03](spring-boot-admin/SPRING-BOOT-ADMIN-2026-03-proxy-serves-instance-html-on-admin-origin.md) | Instance proxy serves a registered instance's `text/html` from the admin origin | 4.1 | 2026-11-08 10:49 | 2026-11-08 10:49 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-04 via GitHub (GHSA-jm84-8c7p-cfrc) (filed against 4.1.4; still present in 4.1.5), in triage, no reply |
+| [SPRING-BOOT-ADMIN-2026-04](spring-boot-admin/SPRING-BOOT-ADMIN-2026-04-sidebar-label-innerhtml.md) | Registration metadata sidebar label is rendered with `innerHTML` | 4.1 | 2026-11-08 02:39 | 2026-11-17 10:13 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-18 via GitHub (GHSA-w69c-89vm-f3p2), in triage, no reply |
+| [SPRING-BOOT-ADMIN-2026-05](spring-boot-admin/SPRING-BOOT-ADMIN-2026-05-custom-link-iframe-javascript-url.md) | Custom-link iframe view loads a `javascript:` URL on the admin origin | 4.1 | — | 2026-11-17 12:52 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-18 via GitHub (GHSA-3x6c-vhwf-mh6w), in triage, no reply |
+| [SPRING-BOOT-ADMIN-2026-06](spring-boot-admin/SPRING-BOOT-ADMIN-2026-06-opsgenie-alias-path-injection.md) | Instance name is formatted into the OpsGenie close-alert URL, so a registrant can close another instance's alert | 5.0 | — | 2026-11-17 14:31 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-18 via GitHub (GHSA-rwv7-wfcr-g4v5), in triage, no reply |
+| [SPRING-BOOT-ADMIN-2026-08](spring-boot-admin/SPRING-BOOT-ADMIN-2026-08-reregistration-takes-over-instance-entry.md) | Re-registering an instance's health URL takes over its entry and leaks its actuator credentials to the registrant | 6.5 | — | 2026-11-17 14:59 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-18 via GitHub (GHSA-h3gm-vqjp-jmm5), in triage, no reply; follow-up comment 2026-11-23 |
+| [SPRING-BOOT-ADMIN-2026-09](spring-boot-admin/SPRING-BOOT-ADMIN-2026-09-metadata-prototype-pollution-innerhtml.md) | Registration metadata key `__proto__.innerHTML` pollutes Object.prototype and runs script on the admin origin | 4.1 | — | 2026-11-17 15:09 | pending (requested from MITRE 2026-11-23) | Reported 2026-11-18 via GitHub (GHSA-596f-gp3x-hp45), in triage, no reply |
+
 ## Better Search Replace
 
 - Source: https://wordpress.org/plugins/better-search-replace/
