@@ -71,4 +71,3 @@ Bind each OpenAPI call to the group whose token authenticated it: reject job ids
 ## Timeline
 
 - 2026-11-02: reported to the vendor by email. No reply.
-- 2026-11-17: CVE requested from MITRE.
